@@ -1,0 +1,14 @@
+<ServerManagerConfiguration>
+   <ProxyGroup name="views">
+      <RenderViewProxy name="LeapView" class="vtkPVLeapRenderView"
+         processes="client|renderserver|dataserver"
+         base_proxygroup="views" base_proxyname="RenderView">
+         <Documentation>
+          QuadView comprises for 4 render views (3 orthogonal, 1 3D view) for
+          showing slices from a 3D dataset.
+         </Documentation>
+
+      </RenderViewProxy>
+   </ProxyGroup>
+   </ServerManagerConfiguration>
+   <!-- ================================================================== -->
