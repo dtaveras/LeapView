@@ -1,7 +1,7 @@
 if [ -d "./build/CMakeFiles/LeapView.dir/" ]
 then
     echo "MeshTalentSource.dir exists => concatnating Extra Flags"
-    echo " "${PWD}"/Leap/Lib/libLeap.dylib" > linkExtra.txt
+    echo " "${PWD}"/Leap/Lib/libc++/libLeap.dylib" > linkExtra.txt
 
     linkDir="./build/CMakeFiles/LeapView.dir/"
 
