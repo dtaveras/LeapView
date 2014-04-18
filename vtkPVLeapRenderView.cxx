@@ -14,10 +14,12 @@ vtkPVLeapRenderView::vtkPVLeapRenderView(){
   this->SetOrientationAxesVisibility(false);
   
   vtkNew<vtkTextActor> text;
-  text->SetInput("NICE");
+  text->SetInput("QUANTMD");
   text->SetPosition(10.0,10.0);
   text->GetTextProperty()->SetBold(1);
+  text->GetTextProperty()->SetColor(1.0,0.0,0.0);
   this->GetNonCompositedRenderer()->AddActor(text.GetPointer());
+
 }
 
 vtkPVLeapRenderView::~vtkPVLeapRenderView(){

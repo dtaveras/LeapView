@@ -17,6 +17,11 @@ IF(PARAVIEW_BUILD_QT_GUI)
 # INCLUDE_DIRECTORIES(${PARAVIEW_GUI_INCLUDE_DIRS})
 
   QT4_WRAP_CPP(MOC_SRCS
+# Note that we moc the controller and listener because we need to using
+# Signals and Slots and that requires Q_OBJECT
+    vtkLeapController.h
+    vtkLeapListener.h
+
     pqLeapView.h
     pqActiveLeapViewOptions.h
   )
@@ -61,7 +66,9 @@ IF(PARAVIEW_BUILD_QT_GUI)
       pqActiveLeapViewOptions.cxx
 
       pqLeapView.cxx
-      pqActiveLeapViewOptions.cxx
+
+      vtkLeapController.cxx
+      vtkLeapListener.cxx
   )
 
 ENDIF(PARAVIEW_BUILD_QT_GUI)
